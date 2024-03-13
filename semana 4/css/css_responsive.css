@@ -1,0 +1,177 @@
+*{
+   box-sizing: border-box;  
+   margin: 0;
+   padding: 0%;
+}
+html{
+    max-height: 100%;
+    }
+body{
+    font-family: Tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+/* seccion css <header> */
+#header{
+    background-color: lightskyblue;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;/* borde redondeados */
+    display: flex;/* tecnica para posicionar elementos */
+    flex-direction: row;/* en fila */
+    justify-content: center; /* alinear horizontal  */
+    align-items: center;/* alinear vertical*/
+    grid-area: header; /* nombre de css grid del <header>*/
+}
+ul{/* seleccion de etiqueta  */
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+    list-style:none;/* borra viñetas */
+    margin: 0 5px;
+    font: bold 12px verdana;
+    }
+a{
+    color: wheat;
+    text-decoration: none;/* quitar subrayado*/
+    }
+    /* seccion css <nav> */
+#menu{
+    grid-area:nav; 
+    background-color: blue;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* seccion css y submenu */
+.menuB >Li{
+    position: relative;
+    display: inline-block;
+}
+.menuB >Li>a{
+    display: block;
+    padding: 15px 20px;/* espacio que hace arriba y abajo izquierda y derecha */
+    color: wheat;
+    text-decoration: none;
+}
+.menuB Li a:hover{/* evento al pasar el mouse  */
+    color: lightgreen; 
+    transition: all .3s;
+    }
+/* seccion css submenu */
+.submenu{
+    position: absolute;
+    background-color: blue;
+    width: 120%;
+    display: none;/* oculta el submenu  */
+}
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: wheat;
+    text-decoration: none;/* para quitar elk subrayado*/
+}
+.menuB li:hover .submenu{
+    display: block;/* evento para mostrar submenu al pasar el mouse encima */
+    z-index: 100;
+    }
+/* seccion css buscador y lupa  */
+.buscarbox input{
+    height: 25px;
+    width: 0;
+    padding: 0;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 100px;
+    transition: ease 0.8s;
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding: 10px;
+    outline: none;
+}
+/* seccion css <section>  */
+#main{
+    grid-area: main; /* nombre css grid del <section> */
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    max-width: 100%;
+    height: auto;
+    /* efecto glass transparencia  */
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur (5px);
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+    }
+    /* seccion css <article>*/
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid blue;
+    border-radius: 15px;
+
+}
+seccion article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur (5px);
+    margin: 20px;
+}
+ /* seccion css <aside>*/
+ #sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgba(255,255,255,0.6); 
+    backdrop-filter: blur (5px);
+    border-radius: 22px;
+    border: 2px solid yellowgreen;
+    align-items: center;
+     }
+iframe{
+    max-width: 100%;
+    height: auto;
+    }
+ /* seccion css <footer>*/
+ #footer{
+    grid-area: footer; /* nombre css  grid del footer */
+    padding: 20px;
+    border: solid yellowgreen;
+    border-radius:  22px;
+    clear: both;/* elimina posicion relativa y absolute */
+    background-color:rgba(255,255,255,0.6); 
+    backdrop-filter: blur (5px);
+ }
+ #redes a{
+    padding: 5px;
+    margin: 0;
+     }
+#redes a i:hover{
+    transform: scale(2.0);/* efecto de aumentar de tamaño el icono */
+}
+/* seccion  de css para iconos redes sociales de fontawesome*/
+i [clas^="fa"] {
+    color: grey;
+    font-size: 18px
+}
+i[class^="fab"]{
+    color: grey;
+    font-size: 30px;
+    border:1px solid transparent;
+    margin: 0;
+}
